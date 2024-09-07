@@ -1,0 +1,49 @@
+<div class="flex h-screen">
+    <nav class="bg-white shadow-xl h-screen fixed top-0 left-0 min-w-[250px] py-6 font-sans overflow-auto">
+        <div class="relative flex flex-col h-full">
+            <div class="flex items-center justify-center font-bold text-xl text-gray-800">
+                <img src="icon.png" alt="logo" class='w-12 h-12' />
+                Angel Rodriguez
+            </div>
+
+            <ul class="space-y-3 my-8 flex-1">
+                <li>
+                    <a routerLink="/dashboard/datepickers"
+                        routerLinkActive="active"
+                        class="text-gray-800 text-sm flex items-center hover:text-gray-600 hover:border-r-4 border-gray-300 hover:bg-gray-100 px-8 py-4 transition-all">
+                        <ng-icon name="heroCalendar" class="mr-4 text-gray-500 text-2xl icon-active"></ng-icon>
+                        <span>Datepickers</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/dashboard/button-fab"
+                        routerLinkActive="active"
+                        class="text-gray-800 text-sm flex items-center hover:text-gray-600 hover:border-r-4 border-gray-300 hover:bg-gray-100 px-8 py-4 transition-all">
+                        <ng-icon name="heroWindow" class="mr-4 text-gray-500 text-2xl icon-active"></ng-icon>
+                        <span>Button FAB</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/dashboard/table"
+                        routerLinkActive="active"
+                        class="text-gray-800 text-sm flex items-center hover:text-gray-600 hover:border-r-4 border-gray-300 hover:bg-gray-100 px-8 py-4 transition-all">
+                        <ng-icon name="heroTableCells" class="mr-4 text-gray-500 text-2xl icon-active"></ng-icon>
+                        <span>Table</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/dashboard/stepper"
+                        routerLinkActive="active"
+                        class="text-gray-800 text-sm flex items-center hover:text-gray-600 hover:border-r-4 border-gray-300 hover:bg-gray-100 px-8 py-4 transition-all">
+                        <ng-icon name="heroArrowUpCircle" class="mr-4 text-gray-500 text-2xl icon-active"></ng-icon>
+                        <span>Stepper</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="ml-60 flex-1 p-6 ">
+        <p class="font-bold text-3xl text-gray-800">Contenido</p>
+        <router-outlet></router-outlet>
+    </div>
+</div>
