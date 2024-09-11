@@ -1,0 +1,10 @@
+<div>
+  <img *ngIf="dogImage" [src]="dogImage" alt="Dog Image">
+  <button (click)="getNewDogImage()">Get New Dog Image</button>
+</div>
+
+<form>
+  <textarea [(ngModel)]="descripcion" appWhiteSpace placeholder="Descripción" name="descripcion"></textarea>
+</form>
+
+<p><strong>Descripción ingresada:</strong> {{ descripcion }}</p>

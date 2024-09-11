@@ -1,0 +1,29 @@
+<div style="max-width: 550px">
+    <h2>Angular Login with Google</h2>
+    
+    <div *ngIf="isLoggedin === false">
+      <div>
+        <button type="button" (click)="loginWithGoogle()">Login with Google</button>
+      </div>
+    </div>
+    
+    <div *ngIf="isLoggedin === true">
+      <div>
+        <label>First Name</label>
+        <input type="text" [value]="socialUser.firstName" id="firstname" readonly>
+      </div>
+      
+      <div>
+        <label>Last Name</label>
+        <input type="text" [value]="socialUser.lastName" id="lastname" readonly>
+      </div>
+      
+      <div>
+        <label>Email</label>
+        <input type="text" [value]="socialUser.email" id="email" readonly>
+      </div>
+      
+      <button type="button" (click)="logOut()">Log Out</button>
+    </div>
+  </div>
+  
