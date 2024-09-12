@@ -4,11 +4,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SocialLoginModule, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
 import {
-  SocialLoginModule,
-  SocialAuthServiceConfig,
+  GoogleLoginProvider,
 } from '@abacritt/angularx-social-login';
-import { GoogleLoginProvider } from '@abacritt/angularx-social-login';
+
 import { environment } from 'src/environments/environment.development';
 
 @NgModule({
@@ -26,11 +26,17 @@ import { environment } from 'src/environments/environment.development';
         providers: [
           {
             id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider(environment.googleAuthClientId),
+            provider: new GoogleLoginProvider(
+              environment.googleAuthClientId
+            )
           },
         ],
+        onError: (err) => {
+          console.error(err);
+        }
       } as SocialAuthServiceConfig,
-    },],
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

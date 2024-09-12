@@ -1,5 +1,5 @@
 export const environment = {
     production: false,
-    googleAuthClientId: '968890188320-2bn4dq9ktmk179ol3pf7ij4hu13bg1l7.apps.googleusercontent.com',
+    googleAuthClientId: '105937120392-s64pft5uv8mupkavl6smkk8bq7jgb65l.apps.googleusercontent.com',
   };
   
